@@ -55,6 +55,10 @@ def add_media(update: Update, context: CallbackContext):
   file_ = open("product_image", "wb")
   photo.download(out=file_)
   send_photo = upload("product_image", width=200, height=150, crop='thumb')
+  # print(send_photo)
+  # Hi this is Paul from Dev.to
+  # Try adding a print statement to send_photo, to see if it executes correctly
+  
   record = {
     "content": quote,
     "media": send_photo["secure_url"]
